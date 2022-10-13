@@ -50,7 +50,7 @@ public class PizzaController: ControllerBase{
     }
 
     // Delete Pizza from Memory
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public IActionResult Delete(int id){
         var pizza = PizzaService.Get(id);
         if (pizza is null)
